@@ -1,0 +1,98 @@
+header {
+    background-color: white;
+    padding: 1em;
+    padding-right: 2em;
+    border-bottom: 1px solid #a1a1a1;
+    box-shadow: 1px 1px 1px #cdcdcd;
+    
+    
+    display: flex;
+    
+    a {
+        text-decoration:none;
+        font-family: "Lato";
+        color: rgb(73,73,73);
+    }
+    
+    h1 {
+        font-family: "Slabo";
+        font-weight: 400; 
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+        
+        a {
+            font-family: "Slabo";
+        }
+        
+    }  
+    
+    .profile{
+        vertical-align: middle;
+        align-self: center;
+        font-family: "Roboto";
+        margin-right: 2em;
+        display: flex;
+        align-items: center;
+    }
+    
+    img {
+        height:36px;
+        
+    }
+    
+    .profile-img{
+        display: inline-block;
+        background-image: url("/assets/images/profile.jpg");
+        height: 50px;
+        width: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        border-radius: 5px;
+        margin: 0 10px;
+    }
+    
+    .spacer{
+        flex: 1;
+        align-self: center;
+    }
+    
+    .logoutButton{
+        display: inline-block;
+        align-self: center;
+        font-family: "Roboto";
+        padding: 10px;
+        margin: 0 1em;
+        border-radius: 3px;
+        border: 1px solid black;
+        
+        &:hover{
+            border-color: red;
+            
+            cursor: pointer;
+            
+            a {
+                color: red;
+            }
+        }  
+    }
+    
+    .mail{
+        align-self: center;
+        margin: 0 1em;
+        font-size: 2em;
+        cursor: pointer;
+        font-family: "Lato";
+        
+        &:hover{
+            color: red;
+        }
+    }
+    
+    .user-info{
+        display: flex;
+    }
+    
+}

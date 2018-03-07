@@ -1,0 +1,348 @@
+header {
+  background-color: white;
+  padding: 1em;
+  padding-right: 2em;
+  border-bottom: 1px solid #a1a1a1;
+  box-shadow: 1px 1px 1px #cdcdcd;
+  display: flex; }
+  header a {
+    text-decoration: none;
+    font-family: "Lato";
+    color: #494949; }
+  header h1 {
+    font-family: "Slabo";
+    font-weight: 400;
+    font-size: 24px;
+    padding: 0;
+    margin: 0; }
+    header h1 a {
+      font-family: "Slabo"; }
+  header .profile {
+    vertical-align: middle;
+    align-self: center;
+    font-family: "Roboto";
+    margin-right: 2em;
+    display: flex;
+    align-items: center; }
+  header img {
+    height: 36px; }
+  header .profile-img {
+    display: inline-block;
+    background-image: url("/assets/images/profile.jpg");
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    margin: 0 10px; }
+  header .spacer {
+    flex: 1;
+    align-self: center; }
+  header .logoutButton {
+    display: inline-block;
+    align-self: center;
+    font-family: "Roboto";
+    padding: 10px;
+    margin: 0 1em;
+    border-radius: 3px;
+    border: 1px solid black; }
+    header .logoutButton:hover {
+      border-color: red;
+      cursor: pointer; }
+      header .logoutButton:hover a {
+        color: red; }
+  header .mail {
+    align-self: center;
+    margin: 0 1em;
+    font-size: 2em;
+    cursor: pointer;
+    font-family: "Lato"; }
+    header .mail:hover {
+      color: red; }
+  header .user-info {
+    display: flex; }
+
+nav {
+  padding: 1em;
+  margin-right: 2em;
+  display: flex;
+  padding-top: 3em; }
+  nav ul {
+    list-style: none;
+    padding: 0; }
+  nav li {
+    padding: 0.5em;
+    vertical-align: middle; }
+  nav li:last-child {
+    border-bottom-width: 1px; }
+  nav a {
+    text-decoration: none;
+    font-family: "Roboto";
+    color: #3f3f3f; }
+
+footer {
+  text-align: center;
+  background-color: #212121;
+  color: white;
+  font-family: "Lato";
+  font-size: 10pt;
+  padding: 10px; }
+
+.dates > div > span {
+  display: inline-block;
+  width: 50px;
+  font-family: "Roboto"; }
+
+.calendar {
+  margin: 10px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #a3a3a3; }
+
+.monthHeader {
+  text-align: center;
+  padding: 4px 1em; }
+  .monthHeader span {
+    font-size: 24px;
+    font-family: "Lato-Bold"; }
+  .monthHeader .nextMonth {
+    float: right;
+    padding: 0 1em;
+    cursor: pointer; }
+  .monthHeader .prevMonth {
+    float: left;
+    padding: 0 1em;
+    cursor: pointer; }
+
+.dates {
+  text-align: center; }
+
+.weekDayHeader {
+  background-color: black;
+  color: white;
+  box-sizing: content-box;
+  font-size: 0.8em; }
+  .weekDayHeader span {
+    padding: 3px 5px 3px 5px;
+    margin: 3px; }
+
+.weekday {
+  cursor: pointer;
+  box-sizing: content-box;
+  font-family: "Lato-Bold";
+  padding: 5px 5px 5px 5px;
+  margin: 3px;
+  border-radius: 3px; }
+  .weekday:hover {
+    color: red;
+    background-color: #7f1400; }
+
+.diff {
+  color: #646464; }
+
+/*
+.current {
+    font-weight: bold;
+}*/
+.current-day {
+  color: red;
+  padding: 4px 4px 4px 4px;
+  border: 1px solid red; }
+
+.dayplanner {
+  font-family: "Roboto";
+  background-color: white;
+  padding: 1em;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #a3a3a3; }
+  .dayplanner hr {
+    display: inline-block;
+    width: 200px; }
+  .dayplanner > div {
+    margin: 10px; }
+  .dayplanner .hr {
+    text-align: center; }
+  .dayplanner .hour {
+    width: 85px;
+    display: inline-block; }
+
+.notices {
+  margin: 10px; }
+  .notices > div {
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #a3a3a3;
+    background-color: white;
+    font-family: "Lato";
+    padding: 10px; }
+
+.profile-img {
+  display: inline-block;
+  background-image: url("/assets/images/profile.jpg");
+  height: 50px;
+  width: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  margin: 0 10px; }
+
+#shoppingListContainer {
+  display: flex; }
+  #shoppingListContainer input {
+    width: 350px;
+    padding: 7px; }
+  #shoppingListContainer label {
+    width: 100px;
+    display: inline-block; }
+  #shoppingListContainer button {
+    padding: 7px 14px;
+    background-color: #ebebeb;
+    color: #555;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer; }
+    #shoppingListContainer button:active {
+      border: 1px solid #00B0FF;
+      color: #00B0FF; }
+    #shoppingListContainer button:hover {
+      background-color: #e6e6e6;
+      border: 1px solid #999; }
+  #shoppingListContainer ul {
+    list-style: none;
+    font-family: "Lato"; }
+
+#shoppingListForm {
+  font-family: "Lato"; }
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url("/assets/fonts/Lato/Lato-Black.ttf") format("truetype");
+  /* IE9 Compat Modes */ }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  /* IE9 Compat Modes */ }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  /* IE9 Compat Modes */ }
+
+@font-face {
+  font-family: 'Slabo';
+  src: url("/assets/fonts/Slabo/Slabo-Regular.ttf") format("truetype");
+  /* IE9 Compat Modes */ }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: gainsboro; }
+
+#root {
+  height: 100%; }
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; }
+
+#container {
+  display: flex;
+  flex: 1; }
+
+h1, h2, h3, h4 {
+  color: #3f3f3f; }
+
+h1 {
+  font-family: "Lato-Bold"; }
+
+h2 {
+  font-family: "Lato"; }
+
+h3, h4 {
+  font-family: "Roboto"; }
+
+a {
+  font-family: "Roboto"; }
+
+main {
+  width: 100%;
+  margin-right: 200px; }
+
+.flex {
+  display: flex; }
+
+.flex-expand {
+  flex: 1; }
+.login {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.loginBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url(/assets/images/cut.jpeg);
+  background-position: center;
+  background-size: cover; }
+  .loginBody:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    z-index: 0;
+    background: red;
+    background: rgba(0, 0, 0, 0.7); }
+
+.form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: rgba(200, 200, 200, 0.65);
+  padding: 1em;
+  border-radius: 4px;
+  border: 1px inset #111; }
+  .form div {
+    padding: 5px; }
+  .form input {
+    border: 1px solid #aaa;
+    padding: 12px;
+    font-size: 16pt;
+    font-family: "Slabo"; }
+  .form button {
+    font-family: "Lato";
+    font-size: 12pt;
+    margin: 0 1em;
+    padding: 0.75em 2em;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    color: #333; }
+
+.errorMessages {
+  border: 1px solid red;
+  border-radius: 3px;
+  background-color: rgba(255, 0, 0, 0.5);
+  padding: 0.5em 1em;
+  font-family: "Helvetica";
+  color: #780000;
+  visibility: hidden;
+  margin: 0 auto; }
+
+.errorMessages.active {
+  visibility: visible; }
+
+/*# sourceMappingURL=index.css.map*/
