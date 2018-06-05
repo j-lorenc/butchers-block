@@ -1,25 +1,26 @@
-import React, {Component} from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
-import Header from "./components/ui/header.js";
-import Footer from "./components/ui/footer.js";
-import Sidebar from "./components/ui/sidebar.js";
-import Main from "./components/ui/main.js";
+import { Route, Switch } from "react-router";
 
-class App extends Component {
-    
-    render(){
-        return (
-            <div id="app">
-                <Header loggedIn={true}/>
-                <div id="container">
-                    <Sidebar />
-                    <Main />
-                </div>
-                <Footer/>
-            </div>
-        );    
-    }
-    
-}
+import Main, {MainS} from "./components/main/main";
+import EnhancedRouter from "./components/general/enhanced-router.js";
 
-export default App
+const App = ({source="browser", url}) => {
+	return (
+		<EnhancedRouter source={source} url={url} component={Main}>
+			<Switch>
+				<Route exact path="/" component={Main} />
+				<Route path="/signup" component={MainS} />
+			</Switch>
+		</EnhancedRouter>
+	);	
+}; 
+
+
+App.propTypes = {
+	source: PropTypes.string,
+	url: PropTypes.string
+};
+
+export default App;
