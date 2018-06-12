@@ -5,7 +5,11 @@ import { Link } from "react-router-dom";
 
 import styles from "./header.scss"; 
 
-class Header extends Component { 
+class Header extends Component {
+	
+	constructor(props){
+		super(props);
+	}
     
 	render(){
 		return ( 
@@ -15,7 +19,7 @@ class Header extends Component {
 				</div>
 				<div className="spacer">
 				</div>                
-				{this.props.loggedIn && (
+				{this.props.user && (
 					<div className="user-info">
 						<div className="mail">
 							<span className="fa-layers fa-fw" title="You have 1 pending message">
@@ -36,7 +40,8 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-	loggedIn: PropTypes.string
+	loggedIn: PropTypes.string,
+	user: PropTypes.object
 };
 
 export default Header;

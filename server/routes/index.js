@@ -5,7 +5,7 @@ import {renderToString} from "react-dom/server";
 
 import App from "app/src/js/app";
 
-import authRoutes, {isLoggedIn} from "./auth";
+import authRoutes from "./auth";
 
 const authedRouter = (app, passport) =>{
 	
@@ -15,14 +15,23 @@ const authedRouter = (app, passport) =>{
 	
 	
 	router.get("/signup", (req, res) => {
-		const main = renderToString(<App source="server" url="/signup"/>);
+		let messages =  req.flash();
+		const main = renderToString(<App source="server" url="/signup" messages={messages}/>);
 		res.render("index", {app:main});
 	});
 	
-	router.get("*", isLoggedIn,  (req, res) => {
-		const main = renderToString(<App source="server"/>);
-		res.render("index", {app:main});
-	});
+	router.get("*", 
+		passport.authenticate("jwt", {
+			session: false, 
+			failureRedirect: "/signup", 
+			failureFlash: true 
+		}), (req, res) => {
+			const user = {...req.user};
+			const main = renderToString(<App source="server"/>);
+			res.render("index", {app:main});
+		}
+	);
+	
 	
 	return router;
 };

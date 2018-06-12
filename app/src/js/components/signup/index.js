@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import styles from "./styles.scss";
 
 import { withRouter } from "react-router";
-import url from "url";
-
 
 const SignupView = ({errorMessages, username, password, handleUserChange, handlePasswordChange, handleLogin, handleClick}) => {
 	
@@ -35,8 +33,6 @@ SignupView.propTypes = {
 };
 
 
-
-
 class Signup extends Component {
 	
 	constructor(props){
@@ -52,8 +48,9 @@ class Signup extends Component {
 		this.handlePasswordChange = this.handlePasswordChange.bind(this);
 		this.handleLogin = this.handleLogin.bind(this);
 		this.handleClick = this.handleClick.bind(this);
+		
+		
 	}
-	
 	
 	handleUserChange(e){
 		this.setState({
@@ -85,9 +82,20 @@ class Signup extends Component {
 				password: this.state.password
 			})
 		});
-		if(res.redirected){
-			history.push(url.parse(res.url).pathname);
-		}		
+		
+		
+		
+		if(res.status === 401){
+			let json = await res.json();
+			history.push({
+				pathname: "/signup",
+				state: json
+			});
+		}
+		if(res.status === 200){
+			history.push("/");
+		}
+		
 	}
 	
 	

@@ -10,7 +10,7 @@ import indexRouter from "./routes/index";
 
 import tunnel from "tunnel-ssh";
 import sshd from "../config/sshd";
-import sessionConf from "../config/session"
+import sessionConf from "../config/session";
 
 import passport from "passport";
 

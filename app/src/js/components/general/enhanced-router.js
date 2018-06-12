@@ -12,10 +12,10 @@ class EnhancedRouter extends Component {
 	}
   
 	async componentDidMount() {
-		const {source, url, children, component:Component} = this.props;
+		const {source, url, children, component:Component, user} = this.props;
 
 		if(source === "server"){
-			let router = (<ServerRouter url={url} component={Component} />);
+			let router = (<ServerRouter url={url} component={Component} user={user}/>);
 			this.setState({ module: router});
 		}else if(source === "browser"){
 			let router = (
@@ -46,13 +46,13 @@ class ServerRouter extends Component {
 	}
 	
 	async componentDidMount() {
-		const {url, component:Component} = this.props;
+		const {url, component:Component, user={user}} = this.props;
 
 		try{
 			const {StaticRouter} = await import("react-router-dom");
 			const router = (
 				<StaticRouter location={url} context={{}}>
-					<Component/>
+					<Component user={user}/>
 				</StaticRouter>
 			);
 			
