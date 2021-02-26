@@ -65,7 +65,7 @@
     "react-router-redux": "^5.0.0-alpha.9",
     "redux-devtools-extension": "^2.13.2",
     "sass-loader": "^7.0.1",
-    "style-loader": "^0.21.0",
+    "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.4",
