@@ -11,7 +11,7 @@
     "lint-fix:server": "eslint --fix ./server/app.js"
   },
   "dependencies": {
-    "animate.css": "^3.6.1",
+    "animate.css": "^4.1.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "connect-flash": "^0.1.1",
